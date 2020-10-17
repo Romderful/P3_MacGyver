@@ -31,10 +31,15 @@ class Maze:
         return [
             coord
             for coord in self.paths
-            if coord not in self.items
+            if coord not in self.items_coords
             and coord != self.hero.hero_position
             and coord != self.guardian_position
         ]
+
+    @property
+    def items_coords(self):
+        """Return the position."""
+        return [coord.position for coord in self.items]
 
     def init_item(self, number):
         """Init_items."""

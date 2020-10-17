@@ -8,7 +8,7 @@ Mini-game where MacGyver has to run away from a labyrinth.
 
 Virtual Environment
 --------------------------------
-Python 3.7
+Python 3.8
 
 Requirements
 --------------------------------
@@ -16,7 +16,7 @@ pygame
 
 Launch
 --------------------------------
-Clone the repository on your computer : https://github.com/jringenbach/MacGyver.git
+Clone the repository on your computer : https://github.com/Romderful/Projet3_MacGyver
 
 Set your virtual environment under python3.7
 

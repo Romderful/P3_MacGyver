@@ -4,12 +4,12 @@
 class Item:
     """Class Items."""
 
-    def __init__(self, position, id, name=None):
-        """Constructeur."""
-        self.position = position
-        self.id = id
-        self.name = name
+    ID = 0
+    NAMES = {1: "ether", 2: "needle", 3: "tube"}
 
-    def set_name(self, name):
-        """Set item's name."""
-        self.name = name
+    def __init__(self, position):
+        """Constructeur."""
+        Item.ID += 1
+        self.position = position
+        self.id = Item.ID
+        self.name = self.NAMES[self.id]

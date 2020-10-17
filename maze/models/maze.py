@@ -18,34 +18,30 @@ class Maze:
         self.items = []
         self.size = 0
         self.walls = []
+        self.paths = []
         self.hero = heroClass.Hero()
         self.guardian_position = (6, 13)
 
         self.init_level(level)
         self.init_item(item_number)
 
+    @property
+    def free_paths(self):
+        """Return the free paths."""
+        return [
+            coord
+            for coord in self.paths
+            if coord not in self.items
+            and coord != self.hero.hero_position
+            and coord != self.guardian_position
+        ]
+
     def init_item(self, number):
         """Init_items."""
-        items = []
-
         for _ in range(number):
-            item_position_x = random.randint(0, self.size)
-            item_position_y = random.randint(0, self.size)
-            item_position = (item_position_x, item_position_y)
-
-            while (
-                item_position in self.walls
-                or item_position in items
-                or item_position == self.hero.hero_position
-                or item_position == self.guardian_position
-            ):
-                item_position_x = random.randint(0, self.size)
-                item_position_y = random.randint(0, self.size)
-                item_position = (item_position_x, item_position_y)
-
-            items.append(item_position)
-            new_item = itemClass.Item(item_position, len(items))
-            self.items.append(new_item)
+            position = random.choice(self.free_paths)
+            item = itemClass.Item(position)
+            self.items.append(item)
 
     def init_level(self, level):
         """Init lvl."""
@@ -55,17 +51,18 @@ class Maze:
         with open(level) as f:
             data = f.read()
 
-            for walls in data:
+            for char in data:
+                position = x, y
 
-                if walls == "#":
-                    self.add_walls((x, y))
+                if char == "#":
+                    self.add_walls(position)
                     x += 1
 
-                elif walls == " ":
+                elif char == " ":
                     x += 1
-                    pass
+                    self.paths.append(position)
 
-                elif walls == "\n":
+                elif char == "\n":
                     y += 1
                     x = 0
 

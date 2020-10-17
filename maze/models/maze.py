@@ -57,20 +57,19 @@ class Maze:
             data = f.read()
 
             for char in data:
-                position = x, y
+                position = (x, y)
 
                 if char == "#":
                     self.add_walls(position)
                     x += 1
 
                 elif char == " ":
-                    x += 1
                     self.paths.append(position)
+                    x += 1
 
                 elif char == "\n":
                     y += 1
                     x = 0
-
         self.size = y
 
     def add_walls(self, position):

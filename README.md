@@ -22,4 +22,4 @@ Set your virtual environment under python 3.8
 
 Pip install pygame (in your virtual environment)
 
-Write "python3 main.py" in your terminal
+Execute "python main.py" in your terminal

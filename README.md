@@ -16,7 +16,7 @@ pygame
 
 Launch
 --------------------------------
-Clone the repository on your computer : https://github.com/Romderful/Projet3_MacGyver
+Clone the repository on your computer : https://github.com/Romderful/Project3_MacGyver
 
 Set your virtual environment under python 3.8
 

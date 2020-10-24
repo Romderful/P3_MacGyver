@@ -1,25 +1,26 @@
-# MacGyver
+# MacGyver - Openclassrooms project 3
 
-Openclassrooms project 3
---------------
-https://openclassrooms.com/fr/dashboard
---------------
-Mini-game where MacGyver has to run away from a labyrinth. 
+Mini-game where MacGyver has to run away from a labyrinth : [link to github](https://openclassrooms.com/fr/dashboard)
 
-Virtual Environment
---------------------------------
-Python 3.8
+## Installation
 
-Requirements
---------------------------------
-pygame 
+Clone [the repository](https://github.com/Romderful/Project3_MacGyver) on your computer.
 
-Launch
---------------------------------
-Clone the repository on your computer : https://github.com/Romderful/Project3_MacGyver
+> Set your virtual environment under [python 3.8](https://www.python.org/downloads/release/python-380/)
 
-Set your virtual environment under python 3.8
+```bash
+python -m venv .venv  # create the virtual environment
+. .venv/Scripts/activate  # activate the virtual environment
+pip install -r requirements.txt  # install the dependencies
+pip freeze > requirements.txt  # create the requirements.txt
+```
 
-Pip install pygame (in your virtual environment)
+## Usage
 
-Execute "python main.py" in your terminal
+```bash
+python main.py
+```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

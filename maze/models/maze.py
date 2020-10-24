@@ -39,7 +39,7 @@ class Maze:
     @property
     def items_coords(self):
         """Return the position."""
-        return [coord.position for coord in self.items]
+        return [item.position for item in self.items]
 
     def init_item(self, number):
         """Init_items."""

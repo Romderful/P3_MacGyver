@@ -98,14 +98,6 @@ class Maze:
                 else:
                     print("Got the ", str(item.id) + ".", len(self.items), "item(s) left !")
 
-    def set_items_names(self, names):
-        """Set items names."""
-        counter = 0
-
-        for item in self.items:
-            item.name = names[counter]
-            counter += 1
-
     def update(self, control: str) -> bool:
         """Update."""
         running = True

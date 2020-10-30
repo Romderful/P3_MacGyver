@@ -1,6 +1,6 @@
 # MacGyver - Openclassrooms project 3
 
-Mini-game where MacGyver has to run away from a labyrinth : [link to github](https://github.com/Romderful)
+Mini-game where MacGyver has to run away from a labyrinth : [link to github](https://github.com/Romderful/Project3_MacGyver)
 
 ## Installation
 

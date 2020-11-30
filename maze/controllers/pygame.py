@@ -19,13 +19,13 @@ class Controller:
             if pygame_lib.key.get_pressed()[115]:
                 command = "down"
 
-            elif pygame_lib.key.get_pressed()[97]:
+            elif pygame_lib.key.get_pressed()[113]:
                 command = "left"
 
             elif pygame_lib.key.get_pressed()[100]:
                 command = "right"
 
-            elif pygame_lib.key.get_pressed()[119]:
+            elif pygame_lib.key.get_pressed()[122]:
                 command = "up"
 
         return command
